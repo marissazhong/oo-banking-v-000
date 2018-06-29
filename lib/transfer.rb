@@ -16,6 +16,8 @@ class Transfer
     if valid?
       self.sender.deposit(-amount)
       self.receiver.deposit(amount)
+    else
+      "Transaction rejected. Please check your account balance."
     end
   end
 
