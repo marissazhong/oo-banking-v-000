@@ -13,7 +13,10 @@ class Transfer
   end
 
   def execute_transaction
-
+    if valid?
+      self.sender.deposit(-amount)
+      self.receiver.deposit(amount)
+    end
   end
 
 end
