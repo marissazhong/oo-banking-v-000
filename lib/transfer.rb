@@ -9,7 +9,7 @@ class Transfer
   end
 
   def valid?
-    BankAccount.sender.valid? && BankAccount.receiver.valid?
+    :sender.valid? && :receiver.receiver.valid?
   end
 
   def execute_transaction
@@ -17,3 +17,8 @@ class Transfer
   end
 
 end
+
+let(:avi) { BankAccount.new("Avi") }
+let(:amanda) { BankAccount.new("Amanda") }
+let(:transfer) { Transfer.new(amanda, avi, 50) }
+let(:bad_transfer) { Transfer.new(amanda, avi, 4000) }
