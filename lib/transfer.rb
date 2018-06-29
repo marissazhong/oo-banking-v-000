@@ -29,7 +29,6 @@ class Transfer
       @status = 'reversed'
     end
   end
-
 end
 
 # let(:avi) { BankAccount.new("Avi") }
